@@ -1,6 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import Shows from "./components/Shows";
+import styled from "styled-components";
 import './App.css';
+
+const Title = styled.h1`
+  font-size: 2em;
+  text-align: center;
+  color: chocolate;
+`;
+
+const SearchInput = styled.input`
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px;
+  color:gray;
+  background: #e5e2e2;
+  border: none;
+  border-radius: 3px;
+  ::placeholder {
+    color: chocolate;
+  }
+`;
+
+const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+`;
 
 function App() {
   const [error, setError] = useState(null);
@@ -35,11 +60,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="main"> 
-          <h1>React Search</h1>
-          <div className="search">
-            <input placeholder="Enter Post Title" onChange={inputHandler}/>
-          </div>
-          <Shows records= {records} input={searchText} />
+          <Wrapper> 
+            <Title> Search Tv Show </Title>
+              <SearchInput  placeholder="Enter Tv Show Title" onChange={inputHandler} />
+            <Shows records= {records} input={searchText} />
+          </Wrapper>
         </div>
       </header>
      
