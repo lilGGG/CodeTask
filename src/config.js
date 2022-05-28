@@ -1,0 +1,1 @@
+export const GATEWAY_API = "https://api.tvmaze.com"

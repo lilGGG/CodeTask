@@ -1,6 +1,7 @@
-import React,  { useState } from 'react'
+import React,  { useState, useEffect } from 'react';
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
+import {getSeasons} from "../api/DataService.js";
 // import ReactTable from '@kavience/react-table';
 // import MaterialTable from "material-table";
 
@@ -8,7 +9,21 @@ import "react-table-6/react-table.css";
 function Shows(props) {
 
     const [selectedIn, setSelectedIn] = useState(0);
+    const [seasons, setSeasons] = useState({});
+    // const id
 
+
+
+    useEffect(() => {
+        async function fetchDataSeasons() {
+          let seasons_result = await getSeasons(selectedIn);
+          setSeasons(seasons_result);
+        }
+        fetchDataSeasons();
+        // setVisible(false);
+      }, [selectedIn]);
+
+      console.log("seasons", seasons);
     // const filteredData = props.records.filter((el) => {
     //     if (props.input === '') {
     //         return el;
