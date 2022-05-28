@@ -41,12 +41,12 @@ function Episodes(props) {
          {/* <a href={episodes[0].url}> {props.seasonId}  {episodes[0].name} </a> */}
          
          <ul>
-             {/* {episodes} */}
+            Episodes
            {data.map((epis) => (
                 <> 
                 {/* <li > {epis.name} </li> */}
-                <li> {epis.image? <img  src={epis.image.medium}  />: ""} </li>
-                <li>   <a href={epis.url}>   {epis.name} </a> </li>
+                <li> {epis.image? <a href={epis.url} target="_blank">  <img  src={epis.image.medium}  /> </a>: ""} </li>
+                <li>  {epis.name}  </li>
                
                 </>
             ))}

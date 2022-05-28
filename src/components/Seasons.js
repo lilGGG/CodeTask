@@ -27,8 +27,10 @@ function Seasons(props) {
       
            {data.map((season) => (
                 <> 
-                <li  key={season.id}> {season.image?  <div onClick={seasonSelected(season.id)}> <img  src={season.image.medium}  />  </div>: ""}  </li> 
-                <li > {season.id} <a href= {season.url}>  Show Season </a>  </li>
+                <li  key={season.id}> {season.image?  <div onClick={seasonSelected(season.id)} > 
+                 <a href= {season.url} target="_blank"> <img  src={season.image.medium}  /></a>  </div>: ""} 
+                </li> 
+                <li> {season.id}   Show Season  </li>
                 <li> <Episodes seasonId={season.id}> </Episodes></li>
                 </>
             ))}

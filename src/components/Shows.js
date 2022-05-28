@@ -62,7 +62,7 @@ function Shows(props) {
     return (
         <> 
         <Grid>
-            <Cell col={6}>
+            <Cell col={9}>
                 <p> Shows </p>
               <ReactTable
                 
@@ -141,9 +141,9 @@ function Shows(props) {
 
                  </Seasons>: ""}
             </Cell>
-            <Cell col={3}>
+            {/* <Cell col={3}>
                  episodes
-            </Cell>
+            </Cell> */}
         </Grid>
                 
      
