@@ -26,6 +26,8 @@ function Episodes(props) {
     
       console.log("episodes", episodes);
 
+      const data = Array.from(episodes);
+
     //   const episFunc = (episodes) => {
     //     setEpisodes1(episodes);
     //   };
@@ -40,7 +42,7 @@ function Episodes(props) {
          
          <ul>
              {/* {episodes} */}
-           {episodes.map((epis) => (
+           {data.map((epis) => (
                 <> 
                 {/* <li > {epis.name} </li> */}
                 <li> {epis.image? <img  src={epis.image.medium}  />: ""} </li>

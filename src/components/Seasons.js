@@ -13,6 +13,7 @@ function Seasons(props) {
         // setSearchText(lowerCase);
       };
     
+      const data = Array.from(props.seasons);
     
     return (
         <> 
@@ -23,7 +24,8 @@ function Seasons(props) {
                 // </>
             )): ""} */}
         <ul>
-           {props.seasons.map((season) => (
+      
+           {data.map((season) => (
                 <> 
                 <li  key={season.id}> {season.image?  <div onClick={seasonSelected(season.id)}> <img  src={season.image.medium}  />  </div>: ""}  </li> 
                 <li > {season.id} <a href= {season.url}>  Show Season </a>  </li>
