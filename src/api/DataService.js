@@ -9,6 +9,12 @@ export async function getSeasons(id) {
   // return await GetDataAPI(`/shows/ + ${id} + /seasons`, id)
 }
 
+export async function getEpisodes(id) {
+  // console.log("GetNerveData");
+  return await GetDataAPI(`/seasons/${id}/episodes`, id);
+  // return await GetDataAPI(`/shows/ + ${id} + /seasons`, id)
+}
+
 
 async function GetDataAPI(endpoint, id) {
   const reqConfig = {};
