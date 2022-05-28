@@ -40,15 +40,8 @@ function App() {
 
 
   useEffect(() => {
-    // fetch("https://jsonplaceholder.typicode.com/users")
-    // fetch("https://jsonplaceholder.typicode.com/todos?_limit=10")
-    // fetch("http://localhost:3000/posts")
-    // fetch("https://mocki.io/v1/d73ff4c7-4c42-4338-b6c9-f6d6144fcd8f")
-    // fetch("https://mocki.io/v1/a46cda09-2fab-4ba9-a278-9493b9ded3a8")
-    // const url = `https://api.tvmaze.com/singlesearch/shows?q=${searchText}`;
     const url = `https://api.tvmaze.com/search/shows?q=${searchText}`
     fetch(url)
-    // fetch("https://mocki.io/v1/a46cda09-2fab-4ba9-a278-9493b9ded3a8")
     .then(res => res.json())
     .then(
       (result) => {
@@ -60,8 +53,8 @@ function App() {
         setError(error);
       }
     )
-    console.log("searchText", searchText)
-    console.log("records", records)
+    // console.log("searchText", searchText)
+    // console.log("records", records)
   }, [searchText]);
 
   return (

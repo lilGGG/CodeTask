@@ -15,16 +15,7 @@ const ListEpisodes = styled.ul`
 `;
 
 function Episodes(props) {
-
     const [episodes, setEpisodes] = useState({});
-    // const [episodes1, setEpisodes1] = useState({});
-    //  console.log("seasons componenti meej", props.seasons);
-     
-    //  let seasonSelected = (id) => {
-    //      console.log("id",id);
-    //     // var lowerCase = e.target.value.toLowerCase();
-    //     // setSearchText(lowerCase);
-    //   };
 
     useEffect(() => {
         async function fetchDataEpisodes() {
@@ -32,19 +23,11 @@ function Episodes(props) {
           setEpisodes(epis_result);
         }
         fetchDataEpisodes();
-        // setVisible(false);
       }, [props.seasonId]);
     
-      console.log("episodes", episodes);
-
+    //   console.log("episodes", episodes);
       const data = Array.from(episodes);
 
-    //   const episFunc = (episodes) => {
-    //     setEpisodes1(episodes);
-    //   };
-
-     
-      
     return (
         <> 
          <ListEpisodes>

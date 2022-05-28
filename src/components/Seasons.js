@@ -10,13 +10,7 @@ const ListSeasons = styled.ul`
 `;
 
 function Seasons(props) {
-
-     console.log("seasons componenti meej", props.seasons);
-     
-    //  let seasonSelected = (id) => {
-    //      console.log("id",id);
-    //   };
-    
+    //  console.log("seasons componenti meej", props.seasons);
       const data = Array.from(props.seasons);
     
     return (
@@ -32,8 +26,6 @@ function Seasons(props) {
                 </>
             ))}
         </ListSeasons>
-        
-      
         </>
     )
 }
