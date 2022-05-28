@@ -2,17 +2,17 @@ import React,  { useState, useEffect } from 'react';
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
 import {getSeasons} from "../api/DataService.js";
+import Seasons from "./Seasons";
 // import ReactTable from '@kavience/react-table';
 // import MaterialTable from "material-table";
 
 
 function Shows(props) {
 
+
+    // const [state, setState] = useState({selectedIn: 0});
     const [selectedIn, setSelectedIn] = useState(0);
     const [seasons, setSeasons] = useState({});
-    // const id
-
-
 
     useEffect(() => {
         async function fetchDataSeasons() {
@@ -24,8 +24,23 @@ function Shows(props) {
       }, [selectedIn]);
 
       console.log("seasons", seasons);
+
+    //   const seasonConvert = ( seasons) => {
+    //       console.log("seasons",seasons);
+    //       return seasons;
+    //     // setScreenState("job");
+    //     // setSelectedJobRowData(null);
+    //   };
+
+    //   function seasonConvert(seasons) {
+    //       console.log("seasons", seasons);
+    //       return seasons;
+    //     // setIsOnline(status.isOnline);
+    //   }
+
+
     // const filteredData = props.records.filter((el) => {
-    //     if (props.input === '') {
+    //     if (props.input === '') {s
     //         return el;
     //     }
     //     else {
@@ -44,7 +59,6 @@ function Shows(props) {
   
     
     return (
-        
         <> 
          <ReactTable
          
@@ -115,34 +129,12 @@ function Shows(props) {
                   return {}
                 }
               }}
-
-            // getTrProps={(selected, rowInfo) => {
-            //     if (rowInfo && rowInfo.row) {
-            //       return {
-            //         onClick: (e) => {
-            //             setSelected(rowInfo.index)
-            //         //   this.setState({
-            //         //     selected: rowInfo.index
-            //         //   })
-            //         },
-            //         style: {
-            //         //   background: rowInfo.index === selected ? '#00afec' : 'white',
-            //           color: rowInfo.index === selected ? 'white' : 'black'
-            //         }
-            //       }
-            //     }else{
-            //       return {}
-            //     }
-            //   }}
         />
-       { /*<ul>
-            {filteredData.map((item) => (
-                <> 
-                    <li  key={item.id}>    <img  src={item.image} /> {item.title} {item.description} </li>
-                </>
-            ))}
-        </ul>
-            */}
+        {(seasons!==undefined || seasons!==null) ? <Seasons seasons={seasons}>
+
+        </Seasons>: ""}
+       
+     
         </>
     )
 }
