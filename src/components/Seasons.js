@@ -2,39 +2,36 @@ import React,  { useState, useEffect } from 'react';
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
 import Episodes from "./Episodes.js";
+import styled from "styled-components";
+
+
+const ListSeasons = styled.ul`
+  list-style-type: none;
+`;
 
 function Seasons(props) {
 
      console.log("seasons componenti meej", props.seasons);
      
-     let seasonSelected = (id) => {
-         console.log("id",id);
-        // var lowerCase = e.target.value.toLowerCase();
-        // setSearchText(lowerCase);
-      };
+    //  let seasonSelected = (id) => {
+    //      console.log("id",id);
+    //   };
     
       const data = Array.from(props.seasons);
     
     return (
         <> 
-        {/* {props.seasons? props.seasons.map((season) => (
-               <a href= {season.url}>  {season.url}</a>
-                // <> 
-                // <li  key={season.id}>    {season.url} </li>
-                // </>
-            )): ""} */}
-        <ul>
-      
+        <ListSeasons>
            {data.map((season) => (
                 <> 
-                <li  key={season.id}> {season.image?  <div onClick={seasonSelected(season.id)} > 
+                <li  key={season.id}> {season.image?  <div > 
                  <a href= {season.url} target="_blank"> <img  src={season.image.medium}  /></a>  </div>: ""} 
                 </li> 
-                <li> {season.id}   Show Season  </li>
+                <li>   Show Season  </li>
                 <li> <Episodes seasonId={season.id}> </Episodes></li>
                 </>
             ))}
-        </ul>
+        </ListSeasons>
         
       
         </>

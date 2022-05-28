@@ -6,10 +6,16 @@ import Seasons from "./Seasons";
 // import ReactTable from '@kavience/react-table';
 // import MaterialTable from "material-table";
 import Grid from 'material-grid/dist/Grid/Grid';
-import Cell from 'material-grid/dist/Grid/Cell'
+import Cell from 'material-grid/dist/Grid/Cell';
+import styled from "styled-components";
+
+const ShowSeasonTitle = styled.h1`
+  font-size: 2em;
+  text-align: left;
+  color: chocolate;
+`;
 
 function Shows(props) {
-
 
     // const [state, setState] = useState({selectedIn: 0});
     const [selectedIn, setSelectedIn] = useState(0);
@@ -63,7 +69,9 @@ function Shows(props) {
         <> 
         <Grid>
             <Cell col={9}>
-                <p> Shows </p>
+                <ShowSeasonTitle> Shows </ShowSeasonTitle>
+                {/* <ShowsTitle> Shows </ShowsTitle> */}
+                {/* <p> Shows </p> */}
               <ReactTable
                 
                 data={props.records}
@@ -118,11 +126,7 @@ function Shows(props) {
                             // console.log("selected 0", selectedIn);
                             setSelectedIn(rowInfo.index);
                             console.log("selected 1", selectedIn);
-                        //   this.setState({
-                        //     selected: rowInfo.index
-                        //   })
                         },
-                        
                         style: {
                         background: rowInfo.index === selectedIn ? 'chocolate' : 'papayawhip',
                         color: rowInfo.index === selectedIn ? 'white' : 'black'
@@ -136,17 +140,12 @@ function Shows(props) {
             />
             </Cell>
             <Cell col={3}>
-                seasons
+                <ShowSeasonTitle> Seasons  </ShowSeasonTitle>
                 {(seasons!==undefined || seasons!==null) ? <Seasons seasons={seasons}>
 
                  </Seasons>: ""}
             </Cell>
-            {/* <Cell col={3}>
-                 episodes
-            </Cell> */}
         </Grid>
-                
-     
         </>
     )
 }

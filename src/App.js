@@ -39,11 +39,6 @@ function App() {
   };
 
 
-//   useEffect(() => {
-//     console.log(state); 
-//     //value of state is used here therefore must be passed as a dependency
-// }, [searchText])
-
   useEffect(() => {
     // fetch("https://jsonplaceholder.typicode.com/users")
     // fetch("https://jsonplaceholder.typicode.com/todos?_limit=10")

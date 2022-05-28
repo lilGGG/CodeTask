@@ -2,6 +2,17 @@ import React,  { useState, useEffect } from 'react';
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
 import {getEpisodes} from "../api/DataService.js";
+import styled from "styled-components";
+
+
+const EpisodesTitle = styled.h1`
+  font-size: 1em;
+  text-align: left;
+  color: chocolate;
+`;
+const ListEpisodes = styled.ul`
+  list-style-type: none;
+`;
 
 function Episodes(props) {
 
@@ -36,25 +47,15 @@ function Episodes(props) {
       
     return (
         <> 
-
-         {/* I am episodes {props.seasonId}  */}
-         {/* <a href={episodes[0].url}> {props.seasonId}  {episodes[0].name} </a> */}
-         
-         <ul>
-            Episodes
+         <ListEpisodes>
+            <EpisodesTitle> Episodes </EpisodesTitle> 
            {data.map((epis) => (
                 <> 
-                {/* <li > {epis.name} </li> */}
                 <li> {epis.image? <a href={epis.url} target="_blank">  <img  src={epis.image.medium}  /> </a>: ""} </li>
                 <li>  {epis.name}  </li>
-               
                 </>
             ))}
-        </ul>
-         
-    
-        
-      
+        </ListEpisodes>
         </>
     )
 }
