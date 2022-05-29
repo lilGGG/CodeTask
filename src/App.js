@@ -27,6 +27,13 @@ const Wrapper = styled.section`
   background: papayawhip;
 `;
 
+const Label = styled.label `
+  color: chocolate;
+  padding: 0 0 4px 10px;
+  line-height: 1.5;
+  display: block;
+`;
+
 function App() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -62,7 +69,8 @@ function App() {
       <header className="App-header">
         <div className="main"> 
           <Wrapper> 
-            <Title> Search Tv Show </Title>
+            <Title> Tv Show with Seasons and Episodes</Title>
+              <Label> Search Show TV </Label>
               <SearchInput  placeholder="Enter Tv Show Title" onChange={inputHandler} />
             <Shows records= {records} input={searchText} />
           </Wrapper>

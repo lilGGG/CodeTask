@@ -73,11 +73,11 @@ function Shows(props) {
                     if (rowInfo && rowInfo.row) {
                     return {
                         onClick: (e) => {
-                            console.log("rowInfo",rowInfo);
-                            console.log("rowInfo row",rowInfo.row);
-                            console.log("row index ",rowInfo.index);
+                            // console.log("rowInfo",rowInfo);
+                            // console.log("rowInfo row",rowInfo.row);
+                            // console.log("row index ",rowInfo.index);
                             setSelectedIn(rowInfo.index);
-                            console.log("selected 1", selectedIn);
+                            // console.log("selected 1", selectedIn);
                         },
                         style: {
                         background: rowInfo.index === selectedIn ? 'chocolate' : 'papayawhip',
