@@ -1,7 +1,11 @@
 import { localInstance } from ".././axios.config.js";
 // import React, { useState, useEffect } from 'react';
 
-
+export async function getShows(searchText) {
+  // console.log("GetNerveData");
+  return await GetDataAPI(`/search/shows?q=${searchText}`, searchText);
+  // return await GetDataAPI(`/shows/ + ${id} + /seasons`, id)
+}
 
 export async function getSeasons(id) {
   // console.log("GetNerveData");

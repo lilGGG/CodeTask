@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 // import Shows from "./components/Shows";
 import MainTvShows from "./components/UI/organisms/MainTvShows/MainTvShows";
+// import { getShows } from "../api/DataService.js";
+import { getShows } from "./api/DataService.js";
 import styled from "styled-components";
 import './App.css';
 
@@ -47,23 +49,32 @@ function App() {
   };
 
 
-  useEffect(() => {
-    const url = `https://api.tvmaze.com/search/shows?q=${searchText}`
-    fetch(url)
-    .then(res => res.json())
-    .then(
-      (result) => {
-        setIsLoaded(true);
-        setRecords(result);
-      },
-      (error) => {
-        setIsLoaded(true);
-        setError(error);
-      }
-    )
-    // console.log("searchText", searchText)
-    // console.log("records", records)
-  }, [searchText]);
+    useEffect(() => {
+        async function fetchDataShows() {
+          let show_result = await getShows(searchText);
+          setRecords(show_result);
+        }
+        fetchDataShows();
+      }, [searchText]);
+
+
+  // useEffect(() => {
+  //   const url = `https://api.tvmaze.com/search/shows?q=${searchText}`
+  //   fetch(url)
+  //   .then(res => res.json())
+  //   .then(
+  //     (result) => {
+  //       setIsLoaded(true);
+  //       setRecords(result);
+  //     },
+  //     (error) => {
+  //       setIsLoaded(true);
+  //       setError(error);
+  //     }
+  //   )
+  //   // console.log("searchText", searchText)
+  //   // console.log("records", records)
+  // }, [searchText]);
 
   return (
     <div className="App">
