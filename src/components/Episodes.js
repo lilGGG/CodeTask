@@ -3,6 +3,7 @@ import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
 import {getEpisodes} from "../api/DataService.js";
 import styled from "styled-components";
+import  EpisSeasonItem from './UI/molecules/EpisSeasonItem/EpisSeasonItem';
 
 
 const EpisodesTitle = styled.h1`
@@ -34,8 +35,14 @@ function Episodes(props) {
             <EpisodesTitle> Episodes </EpisodesTitle> 
            {data.map((epis) => (
                 <> 
-                <li> {epis.image? <a href={epis.url} target="_blank">  <img  src={epis.image.medium}  /> </a>: ""} </li>
-                <li>  {epis.name}  </li>
+                 <EpisSeasonItem
+                   itemName={epis.name}
+                   srcImg = {epis.image? epis.image.medium: ""}
+                   img = {epis.image}
+                   url={epis.url}
+                />
+                {/* <li> {epis.image? <a href={epis.url} target="_blank">  <img  src={epis.image.medium}  /> </a>: ""} </li>
+                <li>  {epis.name}  </li> */}
                 </>
             ))}
         </ListEpisodes>
