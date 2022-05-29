@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Shows from "./components/Shows";
+// import Shows from "./components/Shows";
+import MainTvShows from "./components/UI/organisms/MainTvShows/MainTvShows";
 import styled from "styled-components";
 import './App.css';
 
@@ -72,7 +73,8 @@ function App() {
             <Title> Tv Show with Seasons and Episodes</Title>
               <Label> Search Show TV </Label>
               <SearchInput  placeholder="Enter Tv Show Title" onChange={inputHandler} />
-            <Shows records= {records} input={searchText} />
+            {/* <Shows records= {records} input={searchText} /> */}
+            <MainTvShows records= {records} input={searchText} />
           </Wrapper>
         </div>
       </header>

@@ -1,39 +1,30 @@
-import React,  { useState, useEffect } from 'react';
+import React,  { useState } from 'react';
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
-import {getSeasons} from "../api/DataService.js";
+// import {getSeasons} from "../api/DataService.js";
 // import Seasons from "./Seasons";
-import Seasons from './UI/organisms/Seasons/Seasons.js';
-import Grid from 'material-grid/dist/Grid/Grid';
-import Cell from 'material-grid/dist/Grid/Cell';
-import styled from "styled-components";
+// import Seasons from './UI/organisms/Seasons/Seasons.js';
+// import Grid from 'material-grid/dist/Grid/Grid';
+// import Cell from 'material-grid/dist/Grid/Cell';
+// import styled from "styled-components";
 
-const ShowSeasonTitle = styled.h1`
-  font-size: 2em;
-  text-align: left;
-  color: chocolate;
-`;
 
-function Shows(props) {
-    const [selectedIn, setSelectedIn] = useState(0);
-    const [seasons, setSeasons] = useState({});
-
-    useEffect(() => {
-        async function fetchDataSeasons() {
-          let seasons_result = await getSeasons(selectedIn);
-          setSeasons(seasons_result);
-        }
-        fetchDataSeasons();
-      }, [selectedIn]);
+function TableShow(props) {
+    // const [selectedIn, setSelectedIn] = useState(props.selectedIn);
+    // const [seasons, setSeasons] = useState({});
+    // useEffect(() => {
+    //     async function fetchDataSeasons() {
+    //       let seasons_result = await getSeasons(selectedIn);
+    //       setSeasons(seasons_result);
+    //     }
+    //     fetchDataSeasons();
+    //   }, [selectedIn]);
 
     //   console.log("seasons", seasons);
     
     return (
         <> 
-        <Grid>
-            <Cell col={9}>
-                <ShowSeasonTitle> Shows </ShowSeasonTitle>
-              <ReactTable
+            <ReactTable
                 data={props.records}
                 columns={[
                 {
@@ -77,12 +68,12 @@ function Shows(props) {
                             // console.log("rowInfo",rowInfo);
                             // console.log("rowInfo row",rowInfo.row);
                             // console.log("row index ",rowInfo.index);
-                            setSelectedIn(rowInfo.index);
+                            props.setSelectedIn(rowInfo.index);
                             // console.log("selected 1", selectedIn);
                         },
                         style: {
-                        background: rowInfo.index === selectedIn ? 'chocolate' : 'papayawhip',
-                        color: rowInfo.index === selectedIn ? 'white' : 'black'
+                        background: rowInfo.index === props.selectedIn ? 'chocolate' : 'papayawhip',
+                        color: rowInfo.index === props.selectedIn ? 'white' : 'black'
                         }
                     }
                     }else{
@@ -90,15 +81,12 @@ function Shows(props) {
                     }
                 }}
             />
-            </Cell>
-            <Cell col={3}>
-                <ShowSeasonTitle> Seasons  </ShowSeasonTitle>
-                {(seasons!==undefined || seasons!==null) ? <Seasons seasons={seasons}>
-                 </Seasons>: ""}
-            </Cell>
-        </Grid>
+           
         </>
     )
 }
 
-export default Shows
+export default TableShow
+
+
+

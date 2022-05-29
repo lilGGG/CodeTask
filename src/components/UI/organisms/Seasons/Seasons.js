@@ -1,5 +1,5 @@
 import React,  { useState, useEffect } from 'react';
-import ReactTable from "react-table-6";
+// import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
 // import Episodes from "./UI/organisms/Episodes/Episodes";
 import  EpisSeasonItem from '../../molecules/EpisSeasonItem/EpisSeasonItem';
