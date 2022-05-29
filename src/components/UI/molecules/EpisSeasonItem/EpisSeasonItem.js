@@ -8,7 +8,7 @@ function EpisSeasonItem({
     <div> 
           {/* <li> {img? <a href={url} target="_blank">   <Image src={img.medium}  />  </a>: ""} </li> */}
           <li> {img? <a href={url} target="_blank">   <Image SrcImage={srcImg}  />   </a>: ""} </li> 
-          <li>  <TitleEpisSeason Text ={itemName}>  </TitleEpisSeason>  </li>
+          {itemName? <li>  <TitleEpisSeason Text ={itemName}>  </TitleEpisSeason>  </li>: "" }
     </div>
   );
 }

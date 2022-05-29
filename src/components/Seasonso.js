@@ -1,7 +1,7 @@
 import React,  { useState, useEffect } from 'react';
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
-import Episodes from "./Episodes.js";
+import Episodes from "./UI/organisms/Episodes/Episodes";
 import styled from "styled-components";
 
 
@@ -21,7 +21,7 @@ function Seasons(props) {
                 <li  key={season.id}> {season.image?  <div > 
                  <a href= {season.url} target="_blank"> <img  src={season.image.medium}  /></a>  </div>: ""} 
                 </li> 
-                <li>   Show Season  </li>
+                {/* <li>   Show Season  </li> */}
                 <li> <Episodes seasonId={season.id}> </Episodes></li>
                 </>
             ))}
