@@ -1,10 +1,8 @@
 import React,  { useState, useEffect } from 'react';
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
-// import {getEpisodes} from "../../api/DataService.js";
 import {getEpisodes} from "../../../../api/DataService.js";
 import styled from "styled-components";
-// import  EpisSeasonItem from './UI/molecules/EpisSeasonItem/EpisSeasonItem';
 import  EpisSeasonItem from '../../molecules/EpisSeasonItem/EpisSeasonItem';
 
 const EpisodesTitle = styled.h1`
@@ -44,8 +42,6 @@ function Episodes(props) {
                    img = {epis.image}
                    url={epis.url}
                 />
-                {/* <li> {epis.image? <a href={epis.url} target="_blank">  <img  src={epis.image.medium}  /> </a>: ""} </li>
-                <li>  {epis.name}  </li> */}
                 </>
             ))}
         </ListEpisodes>

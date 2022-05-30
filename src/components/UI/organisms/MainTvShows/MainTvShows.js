@@ -1,8 +1,5 @@
 import React,  { useState, useEffect } from 'react';
-// import ReactTable from "react-table-6";
-// import "react-table-6/react-table.css";
 import {getSeasons} from "../../../../api/DataService.js";
-// import Seasons from "./Seasons";
 import Seasons from '../Seasons/Seasons.js';
 import TableShow from '../../atoms/TableShow/TableShow';
 import Grid from 'material-grid/dist/Grid/Grid';

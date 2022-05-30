@@ -7,7 +7,6 @@ function Header({
   return (
     <div> 
            <Title Text={title}> </Title>
-           {/* Tv Show with Seasons and Episodes  Search Show TV"*/}
            <SearchItem text={searchLabel} inputHandler={inputHandler} />
     </div>
   );
