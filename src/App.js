@@ -3,8 +3,9 @@ import React, { useState, useEffect } from 'react';
 import MainTvShows from "./components/UI/organisms/MainTvShows/MainTvShows";
 // import SearchInput from "./components/UI/atoms/SearchInput/SearchInput";
 // import Label from "./components/UI/atoms/Label/Label";
-import Title from "./components/UI/atoms/Title/Title";
-import SearchItem from './components/UI/molecules/SearchItem/SearchItem';
+// import Title from "./components/UI/atoms/Title/Title";
+// import SearchItem from './components/UI/molecules/SearchItem/SearchItem';
+import Header from "./components/UI/organisms/Header/Header";
 // import { getShows } from "../api/DataService.js";
 import { getShows } from "./api/DataService.js";
 import styled from "styled-components";
@@ -85,8 +86,10 @@ function App() {
       <header className="App-header">
         <div className="main"> 
           <Wrapper> 
-              <Title Text="Tv Show with Seasons and Episodes"> </Title>
-              <SearchItem text="Search Show TV" inputHandler={inputHandler} />
+              <Header title="Tv Show with Seasons and Episodes"  searchLabel ="Search Show TV" inputHandler={inputHandler}/>
+              {/* <Title Text="Tv Show with Seasons and Episodes"> </Title>
+              <SearchItem text="Search Show TV" inputHandler={inputHandler} /> */}
+
               {/* <Label Text="Search Show TV"/>
               <SearchInput inputHandler={inputHandler} />  */}
               {/* <SearchInput  placeholder="Enter Tv Show Title" onChange={inputHandler} /> */}
