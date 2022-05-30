@@ -37,7 +37,7 @@ function Home() {
         <div className="main"> 
           <Wrapper> 
               <Header title="Tv Show with Seasons and Episodes"  searchLabel ="Search Show TV" inputHandler={inputHandler}/>
-            <MainTvShows records= {records} input={searchText} />
+              <MainTvShows records= {records} input={searchText} />
           </Wrapper>
         </div>
       </header>
