@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Seasons test renders snapshot 1`] = `
+<ul
+  className="sc-eCYdqJ hMiXyn"
+>
+  <div>
+    <li>
+       
+      <a
+        href="https://www.tvmaze.com/seasons/3/person-of-interest-season-1"
+        target="_blank"
+      >
+           
+        <img
+          className="sc-bczRLJ fASZzU"
+          src="https://static.tvmaze.com/uploads/images/medium_portrait/24/60864.jpg"
+        />
+           
+      </a>
+       
+    </li>
+  </div>
+  <li>
+     
+    <ul
+      className="sc-hKMtZM gRNQnS"
+    >
+      <h1
+        className="sc-dkzDqf lmEGEz"
+      >
+         Episodes 
+      </h1>
+    </ul>
+  </li>
+  <div>
+    <li>
+       
+      <a
+        href="https://www.tvmaze.com/seasons/4/person-of-interest-season-2"
+        target="_blank"
+      >
+           
+        <img
+          className="sc-bczRLJ fASZzU"
+          src="https://static.tvmaze.com/uploads/images/medium_portrait/24/60865.jpg"
+        />
+           
+      </a>
+       
+    </li>
+  </div>
+  <li>
+     
+    <ul
+      className="sc-hKMtZM gRNQnS"
+    >
+      <h1
+        className="sc-dkzDqf lmEGEz"
+      >
+         Episodes 
+      </h1>
+    </ul>
+  </li>
+</ul>
+`;

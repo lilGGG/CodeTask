@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header test renders snapshot 1`] = `
+<div>
+  <h1
+    className="sc-bczRLJ dgaykd"
+  >
+    app title
+  </h1>
+  <div>
+    <label
+      className="sc-dkzDqf kBxcVt"
+    >
+      tv
+    </label>
+    <input
+      className="sc-gsnTZi dBIVIK"
+      onChange={[Function]}
+      placeholder="Enter Tv Show Title"
+    />
+  </div>
+</div>
+`;

@@ -25,7 +25,7 @@ function Episodes(props) {
         fetchDataEpisodes();
       }, [props.seasonId]);
     
-      // console.log("episodes", episodes);
+      console.log("episodes", episodes);
       const data = Array.from(episodes);
 
     return (

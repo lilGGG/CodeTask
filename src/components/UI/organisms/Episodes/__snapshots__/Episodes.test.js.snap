@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Episodes test renders snapshot 1`] = `
+<ul
+  className="sc-hKMtZM gRNQnS"
+>
+  <h1
+    className="sc-dkzDqf lmEGEz"
+  >
+     Episodes 
+  </h1>
+</ul>
+`;

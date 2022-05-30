@@ -14,6 +14,7 @@ function TableShow(props) {
     // const [seasons, setSeasons] = useState({});
 
     //   console.log("seasons", seasons);
+    console.log("recprds", props.records)
 
     return (
         <> 
