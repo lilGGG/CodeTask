@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
-const StyledLabel = styled(Label)>`
-    font-size: 1em;
-    text-align: left;
+const StyledLabel = styled.label`
     color: chocolate;
+    padding: 0 0 4px 10px;
+    line-height: 1.5;
+    display: block;
 `;
 
 function Label({
