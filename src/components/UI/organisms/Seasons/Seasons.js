@@ -14,6 +14,7 @@ const ListSeasons = styled.ul`
 function Seasons(props) {
     //  console.log("seasons componenti meej", props.seasons);
       const data = Array.from(props.seasons);
+      // console.log("seasons componenti meej", data);
     
     return (
         <> 
@@ -27,6 +28,8 @@ function Seasons(props) {
 
                 {/* <li> {season.image?   <a href= {season.url} target="_blank"> <img  src={season.image.medium}  /></a> : ""}  </li>  */}
                 <EpisSeasonItem
+                   id={season.id}
+                   number={season.number}
                    itemName=""
                    srcImg = {season.image? season.image.medium: ""}
                    img = {season.image}

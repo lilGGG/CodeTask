@@ -1,4 +1,4 @@
-import React,  { useState } from 'react';
+import React,  { useState, useEffect } from 'react';
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
 // import {getSeasons} from "../api/DataService.js";
@@ -12,16 +12,9 @@ import "react-table-6/react-table.css";
 function TableShow(props) {
     // const [selectedIn, setSelectedIn] = useState(props.selectedIn);
     // const [seasons, setSeasons] = useState({});
-    // useEffect(() => {
-    //     async function fetchDataSeasons() {
-    //       let seasons_result = await getSeasons(selectedIn);
-    //       setSeasons(seasons_result);
-    //     }
-    //     fetchDataSeasons();
-    //   }, [selectedIn]);
 
     //   console.log("seasons", seasons);
-    
+
     return (
         <> 
             <ReactTable
@@ -43,7 +36,10 @@ function TableShow(props) {
                 {
                     Header: "Description",
                     accessor: "show.summary",
-                    minWidth: 300
+                    minWidth: 300,
+                    Cell: (row) => {
+                        return row.original.show.summary?row.original.show.summary.replace( /(<([^>]+)>)/ig, '') : "" ;
+                    },
                 },
                 {
                     Header: "End Date",
@@ -65,7 +61,7 @@ function TableShow(props) {
                     if (rowInfo && rowInfo.row) {
                     return {
                         onClick: (e) => {
-                            // console.log("rowInfo",rowInfo);
+                            // console.log("rowInfo row",rowInfo.row);
                             // console.log("rowInfo row",rowInfo.row);
                             // console.log("row index ",rowInfo.index);
                             props.setSelectedIn(rowInfo.index);

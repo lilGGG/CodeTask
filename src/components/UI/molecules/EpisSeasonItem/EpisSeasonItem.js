@@ -2,8 +2,11 @@ import  Image  from '../../atoms/Image/Image';
 import TitleEpisSeason from '../../atoms/TitleEpisSeason/TitleEpisSeason';
 
 function EpisSeasonItem({
-  itemName,srcImg,img,url
+  id, number,itemName,srcImg,img,url
 }) {
+  //  console.log("url", `${itemName} ${id} ${url}` );
+   const unique = number;
+  //  console.log( unique, "uniq");
   return (
     <div> 
           {/* <li> {img? <a href={url} target="_blank">   <Image src={img.medium}  />  </a>: ""} </li> */}
