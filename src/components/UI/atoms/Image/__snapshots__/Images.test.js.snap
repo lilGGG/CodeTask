@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should Preferences renders correctly 1`] = `
+<img
+  className="sc-bczRLJ fASZzU"
+  src="https://static.tvmaze.com/uploads/images/medium_portrait/24/60941.jpg"
+/>
+`;
