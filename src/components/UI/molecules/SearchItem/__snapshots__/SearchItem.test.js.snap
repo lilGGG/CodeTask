@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchItem test renders snapshot 1`] = `
+<div>
+  <label
+    className="sc-gsnTZi jlUXq"
+  >
+    texta
+  </label>
+  <input
+    className="sc-bczRLJ lcYJBc"
+    onChange={[Function]}
+    placeholder="Enter Tv Show Title"
+  />
+</div>
+`;

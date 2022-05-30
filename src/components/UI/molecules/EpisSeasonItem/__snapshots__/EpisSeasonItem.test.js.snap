@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EpisSeasonItem test renders snapshot 1`] = `
+<div>
+  <li>
+     
+    <a
+      href="https://www.tvmaze.com/seasons/7/bitten-season-1"
+      target="_blank"
+    >
+         
+      <img
+        className="sc-bczRLJ fASZzU"
+        src="https://static.tvmaze.com/uploads/images/medium_portrait/45/113621.jpg"
+      />
+         
+    </a>
+     
+  </li>
+  <li>
+      
+    <h1
+      className="sc-gsnTZi bcJCuA"
+    >
+      Epis name
+    </h1>
+      
+  </li>
+</div>
+`;
