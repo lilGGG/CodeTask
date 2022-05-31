@@ -13,21 +13,6 @@ describe('Should Preferences', () => {
       expect(tree).toMatchSnapshot();
     });
 
-    // it("should render content", () => {
-    //     act(() => {
-    //       root = create(<Image />);
-    //     });
-    //     expect(root.toJSON()).toMatchInlineSnapshot();
-    //   });
 
-    //   it("Should test component", () => {
-    //     const wrapper = shallow(<Image SrcImage="https://static.tvmaze.com/uploads/images/medium_portrait/24/60941.jpg"/>);
-    //     expect(wrapper).toMatchSnapshot();
-    //   });
-      
-    // it('renders correctly', () => {
-    //     const tree = renderer.create(<Image />).toJSON();
-    //     expect(tree).toMatchInlineSnapshot();
-    //   });
   });
   

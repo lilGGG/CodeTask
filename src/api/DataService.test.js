@@ -10,7 +10,6 @@ import {
 describe("Testing getShows()", () => {
     it("it should test getShows() success", () => {
       const input = "tv";
-  
       const output = "https://api.tvmaze.com/search/shows?q=tv";
     //   expect(getShows(1)).toBe(output);
       expect(1).toBe(1)

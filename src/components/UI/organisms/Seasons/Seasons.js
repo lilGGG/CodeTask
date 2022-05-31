@@ -9,10 +9,7 @@ const ListSeasons = styled.ul`
 `;
 
 function Seasons(props) {
-     console.log("seasons componenti meej", props.seasons);
       const data = Array.from(props.seasons);
-      // console.log("seasons componenti meej", data);
-    
     return (
         <> 
         <ListSeasons>

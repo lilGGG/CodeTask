@@ -5,7 +5,7 @@ function EpisSeasonItem({
   id,itemName,srcImg,img,url
 }) {
    const unique = id + Math.random();
-   console.log("unique", unique)
+  //  console.log("unique", unique)
   return (
     <div> 
           <li key={Math.random()}> {img? <a href={url} target="_blank">   <Image SrcImage={srcImg}  />   </a>: ""} </li> 

@@ -13,14 +13,6 @@ describe('Label test', () => {
       expect(tree).toMatchSnapshot();
     });
 
-    //   it("Should test component", () => {
-    //     const wrapper = shallow(<Image SrcImage="https://static.tvmaze.com/uploads/images/medium_portrait/24/60941.jpg"/>);
-    //     expect(wrapper).toMatchSnapshot();
-    //   });
-      
-    // it('renders correctly', () => {
-    //     const tree = renderer.create(<Image />).toJSON();
-    //     expect(tree).toMatchInlineSnapshot();
-    //   });
+
   });
   
