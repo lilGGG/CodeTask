@@ -25,7 +25,7 @@ function Episodes(props) {
         fetchDataEpisodes();
       }, [props.seasonId]);
     
-      console.log("episodes", episodes);
+      // console.log("episodes", episodes);
       const data = Array.from(episodes);
 
     return (
@@ -36,7 +36,6 @@ function Episodes(props) {
                 <> 
                  <EpisSeasonItem
                    id ={epis.id}
-                   number ={epis.number}
                    itemName={epis.name}
                    srcImg = {epis.image? epis.image.medium: ""}
                    img = {epis.image}

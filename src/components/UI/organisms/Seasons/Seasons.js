@@ -4,7 +4,6 @@ import  EpisSeasonItem from '../../molecules/EpisSeasonItem/EpisSeasonItem';
 import Episodes from "../../organisms/Episodes/Episodes";
 import styled from "styled-components";
 
-
 const ListSeasons = styled.ul`
   list-style-type: none;
 `;
@@ -21,7 +20,6 @@ function Seasons(props) {
                 <> 
                 <EpisSeasonItem
                    id={season.id}
-                   number={season.number}
                    itemName=""
                    srcImg = {season.image? season.image.medium: ""}
                    img = {season.image}

@@ -3,8 +3,6 @@ import Main from "./Main";
 import ReactDom from "react-dom";
 import '@testing-library/jest-dom/extend-expect';
 import renderer from 'react-test-renderer';
-// import { create, act } from "react-test-renderer";
-// import { shallow, mount, render } from "enzyme";
 
 describe('Main test', () => {
     it('renders snapshot', () => {
@@ -12,10 +10,5 @@ describe('Main test', () => {
       expect(tree).toMatchSnapshot();
     });
 
-    // it("Should test Shallow component", () => {
-    //     const wrapper = shallow(<Main />);
-    //     expect(wrapper).toMatchSnapshot();
-    //   });
-      
   });
   

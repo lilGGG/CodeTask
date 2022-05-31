@@ -2,13 +2,14 @@ import  Image  from '../../atoms/Image/Image';
 import TitleEpisSeason from '../../atoms/TitleEpisSeason/TitleEpisSeason';
 
 function EpisSeasonItem({
-  id, number,itemName,srcImg,img,url
+  id,itemName,srcImg,img,url
 }) {
-  //  const unique = number;
+   const unique = id + Math.random();
+   console.log("unique", unique)
   return (
     <div> 
-          <li> {img? <a href={url} target="_blank">   <Image SrcImage={srcImg}  />   </a>: ""} </li> 
-          {itemName? <li>  <TitleEpisSeason Text={itemName}>  </TitleEpisSeason>  </li>: "" }
+          <li key={Math.random()}> {img? <a href={url} target="_blank">   <Image SrcImage={srcImg}  />   </a>: ""} </li> 
+          {itemName? <li key={Math.random()}>  <TitleEpisSeason Text={itemName}>  </TitleEpisSeason>  </li>: "" }
     </div>
   );
 }

@@ -3,8 +3,6 @@ import Seasons from "./Seasons";
 import ReactDom from "react-dom";
 import '@testing-library/jest-dom/extend-expect';
 import renderer from 'react-test-renderer';
-// import { create, act } from "react-test-renderer";
-// import { shallow, mount, render } from "enzyme";
 
 describe('Seasons test', () => {
     it('renders snapshot', () => {
