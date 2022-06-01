@@ -21,7 +21,6 @@ function Seasons(props) {
            {data.map((season) => (
                 <> 
                 <EpisSeasonItem
-                   id={season.id}
                    itemName=""
                    srcImg = {season.image? season.image.medium: ""}
                    img = {season.image}
