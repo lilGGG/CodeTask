@@ -2,7 +2,7 @@ import { localInstance } from ".././axios.config.js";
 
 /**
  * Tv shows api
- * @param {*} searchText 
+ * @param {string} searchText 
  * @returns tv show records
  */
 export async function getShows(searchText) {
@@ -11,7 +11,7 @@ export async function getShows(searchText) {
 
 /**
  * 
- * @param {*} id  show'd id
+ * @param {number} id  show'd id
  * @returns  Seasons for show record with id = id
  */
 
@@ -22,7 +22,7 @@ export async function getSeasons(id) {
 
 /**
  * 
- * @param {*} id Season's id
+ * @param {number} id Season's id
  * @returns Episodes for Season with id = id
  */
 
@@ -32,8 +32,8 @@ export async function getEpisodes(id) {
 
 /**
  * 
- * @param {* global endpoint} endpoint 
- * @param {* global id} id 
+ * @param {string} endpoint  global endpoint
+ * @param {number} id global id
  * @returns 
  */
 

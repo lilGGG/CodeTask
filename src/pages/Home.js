@@ -10,6 +10,10 @@ const Wrapper = styled.section`
   background: papayawhip;
 `;
 
+/**
+ * Component in order to see a our application and create a single page application
+ * @returns 
+ */
 
 function Home() {
   const [error, setError] = useState(null);

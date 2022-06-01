@@ -2,10 +2,13 @@ import React,  { useState, useEffect } from 'react';
 import ReactTable from "react-table-6";
 import "react-table-6/react-table.css";
 
-function TableShow(props) {
+/**
+ *  Table component for tv shows display
+ * @param {object} props  
+ * @returns  
+ */
 
-    //   console.log("seasons", seasons);
-    console.log("recprds", props.records)
+function TableShow(props) {
 
     return (
         <> 

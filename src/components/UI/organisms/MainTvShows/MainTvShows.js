@@ -12,6 +12,13 @@ const ShowSeasonTitle = styled.h1`
   color: chocolate;
 `;
 
+
+/**
+ * Component displays tv shows, seasons and episodes
+ * @param {object} props  tv shows records object
+ * @returns 
+ */
+
 function Shows(props) {
     const [selectedIn, setSelectedIn] = useState(0);
     const [seasons, setSeasons] = useState({});
@@ -23,8 +30,6 @@ function Shows(props) {
         }
         fetchDataSeasons();
       }, [selectedIn]);
-
-    //   console.log("seasons", seasons);
     
     return (
         <> 

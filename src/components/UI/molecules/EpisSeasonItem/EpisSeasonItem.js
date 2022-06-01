@@ -5,12 +5,12 @@ import TitleEpisSeason from '../../atoms/TitleEpisSeason/TitleEpisSeason';
 /**
  * This return image and image title pair
  *  in order to use in seasons and episodes 
- * @param {*season or episode id} id 
- * @param {*season or episode name} itemName
- * @param {* season or episode img src} srcImg
- * @param {* season or episode img} img
- * @param {* season or episode url} url
- * @returns {*image and title pair}
+ * @param {number} id  season or episode id
+ * @param {string} itemName season or episode name
+ * @param {string} srcImg season or episode img src
+ * @param {img} img season or episode img
+ * @param {string} url season or episode url
+ * @returns {} image and title pair
  */
 function EpisSeasonItem({
   id,itemName,srcImg,img,url

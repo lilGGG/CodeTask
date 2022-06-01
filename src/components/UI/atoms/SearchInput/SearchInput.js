@@ -13,6 +13,11 @@ const SearchInp = styled.input`
   }
 `;
 
+/**
+ * Search input component
+ * @param {} inputHandler 
+ * @returns 
+ */
 
 function SearchInput({
     inputHandler

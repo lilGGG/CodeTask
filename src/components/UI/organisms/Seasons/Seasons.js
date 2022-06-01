@@ -8,6 +8,11 @@ const ListSeasons = styled.ul`
   list-style-type: none;
 `;
 
+/**
+ * Component give a season list for specific show
+ * @param {object} props seasons
+ * @returns seasons list
+ */
 function Seasons(props) {
       const data = Array.from(props.seasons);
     return (

@@ -6,6 +6,11 @@ const TitleStyl = styled.h1`
   color: chocolate;
 `;
 
+/**
+ * Title component for Application heading
+ * @param {string} Text 
+ * @returns 
+ */
 function Title({
   Text
 }) {

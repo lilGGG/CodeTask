@@ -6,6 +6,11 @@ export const ImageShows =  styled.img`
 `;
 
 
+/**
+ * Image component using in espisodes and seasons sections
+ * @param {string} SrcImage 
+ * @returns 
+ */
 function Image({
    SrcImage
 }) {

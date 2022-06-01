@@ -6,6 +6,11 @@ const StyledLabelEpicSeason = styled.h1`
     color: chocolate;
 `;
 
+/**
+ * Title for single episode or singe season heading
+ * @param {string} Text 
+ * @returns 
+ */
 function TitleEpisSeason({
   Text
 }) {

@@ -14,6 +14,13 @@ const ListEpisodes = styled.ul`
   list-style-type: none;
 `;
 
+/**
+ * 
+ * @param {number } props seasonId 
+ * give specific season's(id) episodes 
+ * @returns episodes list
+ */
+
 function Episodes(props) {
     const [episodes, setEpisodes] = useState({});
 
@@ -25,7 +32,6 @@ function Episodes(props) {
         fetchDataEpisodes();
       }, [props.seasonId]);
     
-      // console.log("episodes", episodes);
       const data = Array.from(episodes);
 
     return (
