@@ -1,11 +1,11 @@
 
-# getting start by Lilit 
+# Getting started by Lilit 
 
 1. git clone https://gitlab.com/arvato.systems.latvia/development/frontend/lilit-grigoryan.git
-2. make sure you are in lilit-grigoryan folder and run "npm install --force instead of npm install
-( Reason is that  react 18 version make some invonvinecy)
-3. npm start 
-4. npm test for unit testing
+2. Make sure you are in lilit-grigoryan folder and run "npm install --force" instead of "npm install"
+( --force because react 18 version make some inconvenience for developers)
+3. "npm start"
+4. "npm test" for unit testing
 
 # ############################################################
 
