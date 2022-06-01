@@ -17,6 +17,10 @@ function Home() {
   const [records, setRecords] = useState([]);
   const [searchText, setSearchText] = useState("");
 
+  /**
+   * Search text convert to lower leter
+   * @param {e} e 
+   */
   let inputHandler = (e) => {
     var lowerCase = e.target.value.toLowerCase();
     setSearchText(lowerCase);
