@@ -1,7 +1,6 @@
 import  Image  from '../../atoms/Image/Image';
 import TitleEpisSeason from '../../atoms/TitleEpisSeason/TitleEpisSeason';
 
-
 /**
  * This return image and image title pair
  *  in order to use in seasons and episodes 
@@ -11,13 +10,14 @@ import TitleEpisSeason from '../../atoms/TitleEpisSeason/TitleEpisSeason';
  * @param {string} url season or episode url
  * @returns {} image and title pair
  */
+
 function EpisSeasonItem({
    itemName,srcImg,img,url
 }) {
   return (
     <div> 
-          <li key={Math.random()}> {img? <a href={url} target="_blank">   <Image SrcImage={srcImg}  />   </a>: ""} </li> 
-          {itemName? <li key={Math.random()}>  <TitleEpisSeason Text={itemName}>  </TitleEpisSeason>  </li>: "" }
+          <li key={Math.random()}> {img? <a href={url} target="_blank">   <Image SrcImage={srcImg}  />   </a>: <a href={url} target="_blank">   <TitleEpisSeason Text="Show Item">  </TitleEpisSeason>   </a>} </li> 
+          {itemName? <li key={Math.random()}> <a href={url} target="_blank">  <TitleEpisSeason Text={itemName}>  </TitleEpisSeason> </a> </li>: "" }
     </div>
   );
 }
