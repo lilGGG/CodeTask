@@ -1,11 +1,10 @@
 
 # Getting started by Lilit 
 
-1. git clone https://gitlab.com/arvato.systems.latvia/development/frontend/lilit-grigoryan.git
-2. Make sure you are in lilit-grigoryan folder and run "npm install --force" instead of "npm install"
-( --force because react 18 version make some inconvenience for developers)
+1. git clone https://github.com/lilGGG/CodeTask.git
+2. Run "npm install --force" instead of "npm install"
+( --force because react 18 version bring some inconvenience for developers dont have a time for fixing)
 3. "npm start"
-4. "npm test" for unit testing
 
 # ############################################################
 
